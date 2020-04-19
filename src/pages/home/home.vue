@@ -1,19 +1,19 @@
 <template>
 <div class="home">
-    <p>home</p>
-    <router-link to="/list">列表</router-link>
+    <Home-Header></Home-Header>
 </div>
 </template>
 
 <script>
+import HomeHeader from './components/Header'
 export default {
-  name: 'home'
+  name: 'home',
+  components: {
+    HomeHeader
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.home{
-    font-size: 50px;
-}
+<style>
+
 </style>
