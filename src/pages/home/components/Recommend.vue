@@ -3,7 +3,7 @@
     <div class="title">热门推荐</div>
     <ul>
       <li class="item"
-      v-for="item of recommendList"
+      v-for="item of list"
       :key="item.id"
       >
         <img class="item-img" :src="item.imgUrl">
@@ -20,29 +20,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '001',
-          imgUrl: 'https://dimg04.c-ctrip.com/images/30040s000000hwyeo4FFB_C_228_170.jpg',
-          title: '杭州+苏州+上海3日2晚跟团游·【3个上车点可自选】',
-          desc: '行程透明、纯玩0购物、狮子林或拙政园可自选【漫步西湖宋城穿越千古情表演寒山寺祈福园林城市国际都市】 赠西湖游船 轻松深度漫游 爸妈放心游、天天发班'
-        },
-        {
-          id: '002',
-          imgUrl: 'https://dimg04.c-ctrip.com/images/30040s000000hwyeo4FFB_C_228_170.jpg',
-          title: '杭州+苏州+上海3日2晚跟团游·【3个上车点可自选】',
-          desc: '行程透明、纯玩0购物、狮子林或拙政园可自选【漫步西湖宋城穿越千古情表演寒山寺祈福园林城市国际都市】 赠西湖游船 轻松深度漫游 爸妈放心游、天天发班'
-        },
-        {
-          id: '003',
-          imgUrl: 'https://dimg04.c-ctrip.com/images/30040s000000hwyeo4FFB_C_228_170.jpg',
-          title: '杭州+苏州+上海3日2晚跟团游·【3个上车点可自选】',
-          desc: '行程透明、纯玩0购物、狮子林或拙政园可自选【漫步西湖宋城穿越千古情表演寒山寺祈福园林城市国际都市】 赠西湖游船 轻松深度漫游 爸妈放心游、天天发班'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
